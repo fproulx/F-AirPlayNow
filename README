@@ -1,1 +1,1 @@
-This page contains a bookmarklet that "fixed" Web pages containing video elements without the AirPlay allow flag.
+This page contains a bookmarklet that "fixes" Web pages containing video elements (HTML5) without the AirPlay allow flag (x-video-airplay)
