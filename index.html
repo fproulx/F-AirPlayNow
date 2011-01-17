@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>F*AirPlayNow</title>
+	<style type="text/css" media="screen">
+		body { background-color: #111111; color: white; font-family:helvetica; line-height: 40px; font-size: 18px;}
+		h1, h3 { color: #FFCC11;}
+		a { font-weight:bold; color: white; background-color: #666666; padding: 10px; border-radius: 20px; text-decoration:none; text-shadow: -2px -2px -2px #111111;}
+	</style>
+</head>
+<body>
+	<h1>F*AirPlayNow! bookmarklet demo</h1>
+	<h2>by Flexorium</h2>
+		
+	<p>
+		Save this following link as a bookmarklet, then sync iTunes. <a href="javascript:(function(){var%20vs=document.getElementsByTagName('video');for(var%20i=0;%20i%3Cvs.length;%20i++){var%20v=vs[i];v.setAttribute('x-webkit-airplay', 'allow');v.setAttribute('controls', 'true');};var%20es=document.getElementsByTagName('embed');for(var%20i=0;%20i%3Ces.length;%20i++){var%20e=es[i];e.setAttribute('airplay', 'allow');e.setAttribute('controls', 'allow');};alert('F*AirPlayNow has fixed the video elements on the current page. Enjoy!');})();">Try F*AirPlayNow!</a>
+	</p>
+	<p>
+		<!-- Kudos to Kawanet for the bookmarklet viewer http://kawanet.blogspot.com/2010/08/bookmarklet-viewer-bookmarklet-for.html -->
+		On the iPad / iPhone, bookmark this page, then you'll need to overwrite the URL by <a href="javascript:(function(){var%20a=document.getElementsByTagName('a');var%20f;for(var%20i=0;%20i%3Ca.length;%20i++)%20{var%20b=a[i];if%20(!%20b.href.match(/^javascript:/))%20continue;if%20(b.href.match(/^javascript:void/))%20continue;var%20t=document.createElement('textarea');t.innerHTML=b.href.replace(/&/g,'&amp;').replace(/%3C/g,'&lt;').replace(/%3E/g,'&gt;').replace(/%2520/g,'%20');var%20s=t.style;s.display='block';s.width='100%';s.height='2em';s.color='#006600';s.background='%23EEFFEE';s.border='2px%20solid%20%2366CC66';s.padding='2px';s.lineHeight='1em';s.wordBreak='break-all';s.fontFamily='monospace';s.fontSize='16px';b.parentNode.replaceChild(t,b);var%20h=Math.floor(t.scrollHeight+2);s.height=(h%3E160)?'10em':h+'px';if%20(f)%20continue;f=t;t.select();t.focus();}})();">copying the source yourself</a>
+	</p>
+	
+	<!-- Don't why the <video> and <embed> tags overlay on top of each other. A little table fixes it :-/ -->
+	<table>
+		<tr>
+			<td>
+				<h3>TWIT Live HTTP Live Streaming feed using the video tag</h3>
+				<video src="http://usher.justin.tv/stream/multi_playlist/twit.m3u" width="722" height="480" autoplay="false" controls="true"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h3>Quicktime movie using embed tag</h3>
+				<embed src="http://movies.apple.com/media/us/iphone/2010/tours/apple-iphone4-design_video-us-20100607_r848-9cie.mov" width="848" height="480" autoplay="false"/>	
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
